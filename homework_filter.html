@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table,th,td{
+            border:1px solid black;
+        }
+        td,th,thead,tbody,table{
+            padding:10px;
+        }
+        table{margin:10px 0;}
+    </style>
+</head>
+<body>
+    
+    <table>
+        <thead style="text-align: left;">
+            <tr>
+                <th>
+                    Nama: <input type="text" id="filterNama" oninput="filterData()"><br><br>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    Harga: <input type="number" id="filterHarga1" oninput="filterData()">-<input type="number" id="filterHarga2" onchange="filterData()"><br><br>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    Kategori: 
+                    <select id="filterKategori" oninput="filterData()">
+                        <option value="All">All</option>
+                        <option value="Elektronik">Elektronik</option>
+                        <option value="Pakaian">Pakaian</option>
+                    </select>
+                </th>
+            </tr>
+        </thead>
+        
+    </table>
+
+
+    <table>
+        <tr>
+            <td><input type="text" id="inputNama" placeholder="Name"></td>
+            <td><input type="number" id="inputHarga" placeholder="Harga"></td>
+            <td>
+                <select id="inputKategori">
+                    <option hidden>All</option>
+                    <option value="Elektronik">Elektronik</option>
+                    <option value="Pakaian">Pakaian</option>
+                </select>
+            </td>
+            <td><input type="number" id="inputStok" placeholder="stock"></td>
+        </tr>
+        <tr>
+            <td>
+                <br><button onclick="inputProduk()">Input</button>
+            </td>
+        </tr>
+    </table>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Category</th>
+                <th>Nama</th>
+                <th>Harga</th>
+                <th>Stock</th>
+            </tr>
+        </thead>
+        <tbody id="listProduk">
+            <tr>
+                <td>test</td>
+                <td>test</td>
+                <td>test</td>
+                <td>test</td>
+                <td>test</td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+</body>
+<script src="homework_filter.js"></script>
+</html>
